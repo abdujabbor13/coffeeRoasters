@@ -1,7 +1,8 @@
 /* CUSTOM PROPS  */
 :root {
   --tex-color:#333;
-
+  --green: #0a775f;
+  --outline-color:var(--green);
 }
 
 /* FONTS  */
@@ -65,13 +66,18 @@ img {
   height: auto;
 }
 
+*:focus {
+  outline: 2px dashed var(--outline-color);
+  outline-offset: 3px;
+}
+
 
 /* CONTAINER  */
 .container {
   width: 100%;
-  max-width: 1200px;
-  padding-left: 50px;
-  padding-right: 50px;
+  max-width: 1440px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -81,4 +87,86 @@ img {
 /* MAIN CONTENT  */
 .main-content {
   flex-grow: 1;
+}
+
+
+/* SITE HEADER HERO WRAPPER   */
+.site-header-hero-wrapper {
+  background-image: url(../img/header-bg.jpg);
+}
+
+
+/* HEADER  */
+
+.site-header {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.header-container {
+  padding-left: 40px;
+  padding-right: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo-link {
+  display: flex;
+  flex-shrink: 0;
+  transition: opacity 0.3s ease;
+}
+
+.header-logo-link:hover {
+  opacity: 0.8;
+}
+
+.header-logo-link:active {
+  opacity: 0.6;
+}
+
+.sitenav-list {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.sitenav-link:not(:last-child) {
+  margin-right: 40px;
+}
+
+.sitenav-links {
+  display: block;
+  color:var(--tex-color);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: opacity, color 0.3s ease;
+  white-space: nowrap;
+}
+
+.sitenav-links:hover {
+  color:var(--green);
+}
+
+.sitenav-links:active {
+  opacity: 0.6;
+}
+
+
+/* RETINA BG  */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+  .site-header-hero-wrapper {
+    background-image: url(../img/header-bg@2x.jpg);
+  }
 }
