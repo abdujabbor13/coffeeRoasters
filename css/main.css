@@ -192,6 +192,13 @@ img {
   opacity: 0.6;
 }
 
+.footer-sitenav .sitenav-links {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 1px;
+}
+
 
 /* HERO  */
 .hero-container {
@@ -481,6 +488,57 @@ img {
 .how-it-works-button:focus {
   outline: 2px dashed #c99b67;
   outline-offset: 3px;
+}
+
+
+/* SITE FOOTER  */
+.site-footer {
+  background-color:#f3d7b7;
+}
+
+.site-footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 65px 50px;
+}
+
+.footer-logo-link {
+  transition: opacity 0.3s ease;
+}
+
+.footer-logo-link:hover {
+  opacity: 0.8;
+}
+
+.footer-logo-link:active {
+  opacity: 0.6;
+}
+
+.site-footer-logo-list {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.site-footer-logo-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.site-footer-logo-item a {
+  display: flex;
+  color: var(--tex-color);
+  transition:opacity, color 0.3s ease;
+}
+
+.site-footer-logo-item a:hover {
+  color: var(--green);
+}
+
+.site-footer-logo-item a:active {
+  opacity: 0.6;
 }
 
 
