@@ -88,12 +88,12 @@ img {
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
+  transition: opacity 0.3s ease;
 }
 
 .green-button {
   background-color:var(--green);
   color:#fff;
-  transition: opacity 0.3s ease;
 }
 
 .green-button:hover {
@@ -385,6 +385,105 @@ img {
 }
 
 
+/* HOW IT WORKS  */
+.how-it-works-wrapper {
+  padding: 50px 30px;
+  background-image: url(../img/how-it-works-bg.jpg);
+  text-align: center;
+}
+
+.how-it-works-heading {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 80px;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 59px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.how-it-works-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-left: -20px;
+  counter-reset:how-it-works;
+  margin-bottom: 60px;
+}
+
+.how-it-works-item {
+  width: calc(100% / 3 - 20);
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  counter-increment: how-it-works;
+}
+
+.how-it-works-item::before {
+  width: 60px;
+  height: 60px;
+  background-color: #f8f8f2;
+  border:4px solid #c99b67;
+  margin-bottom: 20px;
+  content:"";
+}
+
+.how-it-works-inner {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 40px;
+  text-align: left;
+  flex-grow: 1;
+  background-color: #f8f8f8;
+}
+
+.how-it-works-inner::before {
+  content:"0"counter(how-it-works);
+  align-self: flex-end;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 75px;
+  margin-bottom: 45px;
+}
+
+.how-it-works-title {
+  max-width: 250px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  text-transform: uppercase;
+}
+
+.how-it-works-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  margin: 0;
+}
+
+.how-it-works-button {
+  background-color: #c99b67;
+  color: #fff;
+}
+
+.how-it-works-button:hover {
+  opacity: 0.8;
+}
+
+.how-it-works-button:active {
+  opacity: 0.6;
+}
+
+.how-it-works-button:focus {
+  outline: 2px dashed #c99b67;
+  outline-offset: 3px;
+}
+
+
 /* RETINA BG  */
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -403,5 +502,9 @@ only screen and (                min-resolution: 2dppx) {
 
   .index-features-inner {
     background-image: url(../img/index-features-bg@2x.jpg);
+  }
+
+  .how-it-works-wrapper {
+    background-image: url(../img/how-it-works-bg@2x.jpg);
   }
 }
